@@ -21,7 +21,7 @@
 
 ::-webkit-scrollbar-thumb {
     width: 10px;
-    background-color: #f0f0f0;
+    background-color: white;
 }
 
 html {
@@ -52,12 +52,12 @@ a {
     align-items: center;
     height: 70px;
     background-color: #0f0f0f;
-    color: #f0f0f0;
+    color: white;
 }
 
 #header h1 {
     font-size: 25pt;
-    color: #f0f0f0;
+    color: white;
 }
 
 #header h1:hover {
@@ -74,7 +74,7 @@ a {
 }
 
 #header li a:hover {
-    color: #f0f0f0;  
+    color: white;  
     text-decoration: underline;  
 }
 
@@ -127,7 +127,7 @@ nav a.a:hover::after{
     justify-content: center;
     align-items: center;
     background-color: #0f0f0f;
-    color: #f0f0f0;
+    color: white;
     text-align: center;
     height: 30vh;
 }
@@ -149,7 +149,7 @@ nav a.a:hover::after{
     flex-direction: column;
     justify-content: space-evenly;
     text-align: center;
-    background-color: #f0f0f0;
+    background-color: white;
 }
 
 #main h3 {
@@ -208,7 +208,7 @@ button:hover {
     display: flex;
     flex-direction: column;
     background-color: #0f0f0f;
-    color: #f0f0f0;
+    color: white;
     text-align: center;
     padding: 20px 0;
 }
@@ -266,7 +266,7 @@ button:hover {
         display: block;
         width: 20px;
         border-top: 2px solid;
-        color: #f0f0f0;
+        color: white;
         animation: fadeIn;
         animation-delay: 1s;
     }
