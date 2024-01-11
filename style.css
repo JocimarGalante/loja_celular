@@ -1,8 +1,7 @@
 @charset "UTF-8";
 @import url("https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css");
 
-/* RESET */
-
+/* Reset e Estilos Gerais */
 * {
     margin: 0;
     padding: 0;
@@ -10,10 +9,15 @@
     list-style: none;
     text-decoration: none;
     font-size: 100%;
-    font-family: century Gothic;
+    font-family: "Century Gothic", sans-serif;
     transition: .3s;
 }
 
+body {
+    font-family: "Century Gothic", sans-serif; /* Fallback caso a fonte principal não esteja disponível */
+}
+
+/* Scrollbar */
 ::-webkit-scrollbar {
     width: 10px;
     background-color: #0f0f0f;
@@ -24,22 +28,7 @@
     background-color: white;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
-a {
-    color: #0f0f0f;
-}
-
-.point {
-    color: #5c9199;
-    font-weight: 900;
-    font-size: 25pt;
-}
-
-/* HEADER */
-
+/* Header */
 #header {
     display: flex;
     position: sticky;
@@ -54,6 +43,7 @@ a {
 #header h1 {
     font-size: 25pt;
     color: white;
+    transition: transform 0.3s;
 }
 
 #header h1:hover {
@@ -67,17 +57,20 @@ a {
 
 #header li a {
     color: #5c9199;
+    transition: color 0.3s, text-decoration 0.3s;
 }
 
 #header li a:hover {
-    color: white;  
-    text-decoration: underline;  
+    color: white;
+    text-decoration: underline;
 }
 
+/* Botão Mobile */
 #btn-mobile {
     display: none;
 }
 
+/* Navegação */
 nav a.a {
     margin: 10px;
     opacity: 1;
@@ -85,7 +78,7 @@ nav a.a {
     padding: 0 10px;
 }
 
-nav a.a::after{
+nav a.a::after {
     content: "";
     position: absolute;
     background-color: #000000;
@@ -97,16 +90,15 @@ nav a.a::after{
     transition: 0.5s;
 }
 
-nav a.a:hover{
+nav a.a:hover {
     color: #000000;
 }
 
-nav a.a:hover::after{
+nav a.a:hover::after {
     width: 100%;
 }
 
-/* landing */
-
+/* Landing */
 #img {
     position: sticky;
     z-index: -1;
@@ -137,8 +129,7 @@ nav a.a:hover::after{
     max-width: 600px;
 }
 
-/* MAIN */
-
+/* Main */
 #main {
     display: flex;
     min-height: 80vh;
@@ -169,6 +160,8 @@ nav a.a:hover::after{
     margin: 10px;
     align-items: center;
     justify-content: space-around;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 #celulares img {
@@ -192,14 +185,14 @@ button {
     border-radius: 5px;
     padding: 5px;
     border: 2px solid #5c9199;
+    transition: transform 0.5s;
 }
 
 button:hover {
     animation: fa-bounce 1s;
 }
 
-/* FOOTER */
-
+/* Footer */
 #footer {
     display: flex;
     flex-direction: column;
@@ -220,14 +213,12 @@ button:hover {
     color: #5c9199;
 }
 
-#footer i:hover{
+#footer i:hover {
     animation: none;
 }
 
-/* Media query */
-
+/* Media Query */
 @media (max-width: 1455px) {
-    
     #celulares {
         flex-direction: column;
     }
@@ -243,11 +234,9 @@ button:hover {
     #img {
         margin-bottom: -5px;
     }
-
 }
 
-@media ( max-width: 900px ) {
-
+@media (max-width: 900px) {
     #btn-mobile {
         display: flex;
         padding: .5rem 1rem;
@@ -257,61 +246,4 @@ button:hover {
         cursor: pointer;
         gap: .5rem;
     }
-
-    #hamburger {
-        display: block;
-        width: 20px;
-        border-top: 2px solid;
-        color: white;
-        animation: fadeIn;
-        animation-delay: 1s;
-    }
-
-    #hamburger::after, #hamburger::before {
-        content: '';
-        display: block;
-        width: 20px;
-        height: 2px;
-        background: currentColor;
-        margin-top: 5px;
-        transition: .3s;
-        position: relative;
-    }
-
-    #nav.active #hamburger {
-        border-top-color: transparent; 
-    }
-
-    #nav.active #hamburger::before {
-        transform: rotate(135deg);
-    }
-    
-    #nav.active #hamburger::after {
-        transform: rotate(-135deg);      
-        top: -7px;  
-    }
-
-    #menu {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
-        position: absolute;
-        width: 100%;
-        right: 0px;
-        top: 70px;
-        background-color: #0f0f0f;
-        height: 0;
-        visibility: hidden;
-        overflow-y: hidden;
-        transition: .6s;
-        z-index: 1000;
-    }
-    
-    #nav.active #menu {
-        visibility: visible;
-        overflow-y: auto;
-        height: 20vh;
-    }
-
 }
