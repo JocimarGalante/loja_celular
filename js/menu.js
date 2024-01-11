@@ -82,7 +82,7 @@ const celularesData = [
     {
         title: 'Xiaomi',
         image: 'https://m.media-amazon.com/images/I/61MIJc9pRDL._AC_SY679_.jpg',
-        description: 'Smartphone Xiaomi Note 12 Pro 4G - 128GB + 6GB Ram',
+        description: 'Smartphone Xiaomi Note 12 Pro',
         price: 'R$1.555,00',
         buyLink: 'https://www.amazon.com.br/Smartphone-Xiaomi-Note-12-Pro/dp/B0BZT82RH1/ref=sr_1_4_sspa?__mk_pt_BR=%25C3%2585M%25C3%2585%25C5%25BD%25C3%2595%25C3%2591&amp;keywords=Smartphone%252BXiaomi&amp;qid=1704978983&amp;sr=8-4-spons&amp;ufe=app_do%253Aamzn1.fos.25548f35-0de7-44b3-b28e-0f56f3f96147&amp;sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&amp;th=1&_encoding=UTF8&tag=jocimargalant-20&linkCode=ur2&linkId=d867db7344bf87652ff56b81a8400255&camp=1789&creative=9325',
     },

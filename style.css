@@ -137,6 +137,7 @@ nav a.a:hover::after {
     justify-content: space-evenly;
     text-align: center;
     background-color: white;
+    padding: 20px; /* Added padding */
 }
 
 #main h3 {
@@ -161,17 +162,18 @@ nav a.a:hover::after {
     align-items: center;
     justify-content: space-around;
     flex-wrap: wrap;
-    justify-content: space-between;
 }
 
 #celulares img {
     max-height: 450px;
+    width: 100%; /* Make images responsive */
 }
 
 .cel {
     padding: 10px;
     border-radius: 5px;
     border: 2px solid #0f0f0f;
+    margin: 10px; /* Added margin */
 }
 
 .preco {
@@ -228,7 +230,7 @@ button:hover {
     }
 
     #main {
-        padding: 70px;
+        padding: 20px;
     }
 
     #img {
@@ -245,5 +247,75 @@ button:hover {
         background: none;
         cursor: pointer;
         gap: .5rem;
+    }
+}
+/* Media Query for Mobile */
+@media (max-width: 600px) {
+    #header {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+
+    #header ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    #header li {
+        text-align: center;
+    }
+
+    #header li a {
+        display: block;
+        padding: 10px;
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid #5c9199;
+        box-sizing: border-box;
+    }
+
+    #header li:last-child a {
+        border-bottom: none;
+    }
+
+    #btn-mobile {
+        display: flex;
+        position: relative;
+        z-index: 2;
+        padding: .5rem 1rem;
+        font-size: 1rem;
+        border: none;
+        background: none;
+        cursor: pointer;
+        gap: .5rem;
+    }
+
+    nav {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #0f0f0f;
+        z-index: 1;
+    }
+
+    #btn-mobile:hover + nav,
+    nav:hover {
+        display: flex;
+        flex-direction: column;
+    }
+
+    nav a.a {
+        width: 100%;
+        padding: 10px;
+        border-bottom: 1px solid #5c9199;
+        box-sizing: border-box;
+    }
+
+    nav a.a:last-child {
+        border-bottom: none;
     }
 }
