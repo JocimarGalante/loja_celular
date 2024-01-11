@@ -129,7 +129,7 @@ nav a.a:hover::after{
 }
 
 #landing h2 {
-    color: #5c9199;
+    color: hsl(147, 31%, 60%);
     font-size: 20pt;
 }
 
