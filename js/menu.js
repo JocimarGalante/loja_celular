@@ -46,6 +46,7 @@ function addCelularesToScreen(celulares) {
         div.appendChild(price);
 
         const buyButton = document.createElement('button');
+        buyButton.classList.add('btn', 'btn-outline-info');
         const buyLink = document.createElement('a');
         buyLink.href = celular.buyLink;
         buyLink.innerHTML = 'Compre Aqui';
