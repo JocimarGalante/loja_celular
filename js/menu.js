@@ -95,3 +95,23 @@ const celularesData = [
     }
     // Adicione mais objetos para representar outros celulares
 ];
+
+// Add this script to the end of your HTML body or in a separate JavaScript file
+document.addEventListener("DOMContentLoaded", function() {
+    var scrollUpBtn = document.getElementById("scroll-up-btn");
+  
+    // Show/hide the scroll-up button based on scroll position
+    window.addEventListener("scroll", function() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        scrollUpBtn.style.display = "block";
+      } else {
+        scrollUpBtn.style.display = "none";
+      }
+    });
+  
+    // Scroll to the top when the button is clicked
+    scrollUpBtn.addEventListener("click", function() {
+      document.body.scrollTop = 0; // For Safari
+      document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
+    });
+  });
