@@ -239,6 +239,10 @@ button:hover {
     }
 }
 
+.point{
+    color: #5c9199;
+}
+
 @media (max-width: 900px) {
     #btn-mobile {
         display: flex;
