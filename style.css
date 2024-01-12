@@ -227,8 +227,7 @@ button:hover {
     }
 
     .cel {
-        border-radius: 5px;
-        border: 2px solid #0f0f0f;
+        border: none;
     }
 
     #main {
