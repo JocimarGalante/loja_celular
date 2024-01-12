@@ -23,7 +23,7 @@ function findTransactions() {
 function addCelularesToScreen(celulares) {
     const container = document.getElementById('celulares');
 
-    celulares.forEach(celular => {
+    celulares.forEach((celular, index) => {
         const div = document.createElement('div');
         div.classList.add('cel');
 
@@ -34,16 +34,26 @@ function addCelularesToScreen(celulares) {
         const image = document.createElement('img');
         image.src = celular.image;
         image.alt = celular.title;
+
+        // Add Bootstrap "data-toggle" and "data-target" attributes
+        image.setAttribute('data-toggle', 'collapse');
+        image.setAttribute('data-target', `#details${index}`);
+        
         div.appendChild(image);
+
+        // Add collapse container
+        const collapseContainer = document.createElement('div');
+        collapseContainer.classList.add('collapse');
+        collapseContainer.id = `details${index}`;
 
         const description = document.createElement('p');
         description.innerHTML = celular.description;
-        div.appendChild(description);
+        collapseContainer.appendChild(description);
 
         const price = document.createElement('span');
         price.classList.add('preco');
         price.innerHTML = celular.price;
-        div.appendChild(price);
+        collapseContainer.appendChild(price);
 
         const buyButton = document.createElement('button');
         buyButton.classList.add('btn', 'btn-outline-info');
@@ -52,11 +62,14 @@ function addCelularesToScreen(celulares) {
         buyLink.innerHTML = 'Compre Aqui';
         buyButton.appendChild(buyLink);
         addBreakLine(price);
-        div.appendChild(buyButton);
+        collapseContainer.appendChild(buyButton);
+
+        div.appendChild(collapseContainer);
 
         container.appendChild(div);
     });
 }
+
 
 
 function addBreakLine(parentElement) {
